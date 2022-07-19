@@ -89,11 +89,11 @@ templates:
     name: always/sometimes/never
     reference: Sanh et al. 2021
   75db2bc2-3caa-4956-9653-13c7dd6255df: !Template
-    answer_choices: True ||| False ||| Neither
+    answer_choices: true ||| false ||| neither
     id: 75db2bc2-3caa-4956-9653-13c7dd6255df
     jinja: '{{premise}}
 
-      Question: {{hypothesis}} True, False, or Neither? ||| {% if label !=-1 %}{{
+    Question: {{hypothesis}} true, false, or neither? answer: ||| {% if label !=-1 %}{{
       answer_choices[label] }}{% endif %}'
     metadata: !TemplateMetadata
       choices_in_prompt: true

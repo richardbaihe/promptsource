@@ -49,7 +49,7 @@ templates:
     id: 8fb1c6aa-20e9-438c-bece-c6af1c746449
     jinja: '{{premise}}
 
-      Question: {{hypothesis}} True or False? ||| {% if label != -1 %}{{ answer_choices[label]
+    Question: {{hypothesis}} True or False? answer: ||| {% if label != -1 %}{{ answer_choices[label]
       }}{% endif %}'
     metadata: !TemplateMetadata
       choices_in_prompt: true

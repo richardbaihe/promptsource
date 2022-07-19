@@ -63,6 +63,19 @@ templates:
       original_task: false
     name: Open-ended completion
     reference: Template for open-ended common sense completion
+  455bdea8-6537-4b56-8dc3-cf034ddec591: !Template
+    answer_choices: '{{endings | join("|||")}}'
+    id: 455bdea8-6537-4b56-8dc3-cf034ddec591
+    jinja: '{{activity_label}}: {{ctx}} |||  {{endings[label | int()]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: GPT-3 style
+    reference: ''
   4ebf22a1-2d23-426c-a083-b43fc8567687: !Template
     answer_choices: null
     id: 4ebf22a1-2d23-426c-a083-b43fc8567687

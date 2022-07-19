@@ -1,6 +1,20 @@
 dataset: super_glue
 subset: copa
 templates:
+  0b9059ac-3a36-4935-ac49-e059914a06aa: !Template
+    answer_choices: '{{choice1}} ||| {{choice2}}'
+    id: 0b9059ac-3a36-4935-ac49-e059914a06aa
+    jinja: '{{premise}}{% if question == "cause" %} Because {% else %} So {% endif
+      %} ||| {{ answer_choices[label] }} '
+    metadata: !TemplateMetadata
+      choices_in_prompt: false
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: GPT-3 style
+    reference: ''
   0edd8660-f299-4819-a5ac-633c11177228: !Template
     answer_choices: '{{choice1}} ||| {{choice2}}'
     id: 0edd8660-f299-4819-a5ac-633c11177228
